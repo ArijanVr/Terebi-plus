@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>terebi+ Vorschau</title>
+</head>
+<body>
+  <div id="viewport">
+    <div id="stage" aria-label="terebi+ 1920 × 1080">
+      <div class="bg">
+        <div class="photo"></div>
+        <div class="scene" id="sceneA"></div>
+        <div class="scene" id="sceneB"></div>
+        <div class="photo-shade"></div>
+        <div class="fx" id="fx"><i></i><i></i></div>
+        <div class="dimmer" id="dimmer"></div>
+      </div>
+      <div class="safe-guide"></div>
+      <header class="top">
+        <div class="logo" id="logo" role="img" aria-label="terebi+"></div>
+        <div class="top-right">
+          <div id="weather" class="weather"></div>
+          <div id="topActions" class="top-actions"></div>
+        </div>
+      </header>
+      <section id="weatherCard" class="weather-card"></section>
+      <main id="apps" class="apps"></main>
+      <div id="appName" class="app-name"></div>
+      <section id="settings" class="layer settings" hidden></section>
+      <section id="menu" class="layer menu" hidden></section>
+      <section id="qr" class="layer qr" hidden></section>
+      <section id="running" class="layer running" hidden></section>
+      <div id="countdown" class="countdown" hidden></div>
+      <div id="toast" class="toast" hidden></div>
+    </div>
+  </div>
+  <aside id="sim" class="sim"></aside>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

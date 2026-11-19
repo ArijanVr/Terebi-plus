@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400">
+  <title>Terebi+ Logo horizontal</title>
+  <rect width="1280" height="400" fill="#1B1B1D"/>
+  <circle cx="330" cy="200" r="78" fill="#E0302A"/>
+  <text x="450" y="200" dominant-baseline="central" fill="#ECE9E3" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="160" font-weight="500" letter-spacing="-2">terebi+</text>
+</svg>

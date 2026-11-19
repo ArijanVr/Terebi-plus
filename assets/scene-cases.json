@@ -1,0 +1,21 @@
+{
+  "$comment": "Gemeinsame Testfälle für den Hintergrundmanager (preview/src/logic.js und app SceneResolver.kt). Zeiten in Minuten seit Mitternacht (Gerätezeitzone). sunrise 420 = 07:00, sunset 1050 = 17:30. dim gilt für Wetterszenen bei Dunkelheit.",
+  "cases": [
+    { "minute": 60,   "sunrise": 420, "sunset": 1050, "code": 0,  "scene": "night",     "dim": false },
+    { "minute": 400,  "sunrise": 420, "sunset": 1050, "code": 0,  "scene": "sunrise",   "dim": false },
+    { "minute": 465,  "sunrise": 420, "sunset": 1050, "code": 1,  "scene": "sunrise",   "dim": false },
+    { "minute": 540,  "sunrise": 420, "sunset": 1050, "code": 0,  "scene": "morning",   "dim": false },
+    { "minute": 540,  "sunrise": 420, "sunset": 1050, "code": 2,  "scene": "morning",   "dim": false },
+    { "minute": 660,  "sunrise": 420, "sunset": 1050, "code": 3,  "scene": "cloudy",    "dim": false },
+    { "minute": 780,  "sunrise": 420, "sunset": 1050, "code": 1,  "scene": "afternoon", "dim": false },
+    { "minute": 1040, "sunrise": 420, "sunset": 1050, "code": 0,  "scene": "sunset",    "dim": false },
+    { "minute": 1140, "sunrise": 420, "sunset": 1050, "code": 0,  "scene": "evening",   "dim": false },
+    { "minute": 1330, "sunrise": 420, "sunset": 1050, "code": 3,  "scene": "cloudy",    "dim": true },
+    { "minute": 780,  "sunrise": 420, "sunset": 1050, "code": 61, "scene": "rain",      "dim": false },
+    { "minute": 1300, "sunrise": 420, "sunset": 1050, "code": 81, "scene": "rain",      "dim": true },
+    { "minute": 600,  "sunrise": 420, "sunset": 1050, "code": 73, "scene": "snow",      "dim": false },
+    { "minute": 480,  "sunrise": 420, "sunset": 1050, "code": 45, "scene": "fog",       "dim": false },
+    { "minute": 900,  "sunrise": 420, "sunset": 1050, "code": 95, "scene": "storm",     "dim": false },
+    { "minute": 1100, "sunrise": 420, "sunset": 1050, "code": 99, "scene": "storm",     "dim": true }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "terebi-preview", "runtimeExecutable": "npm", "runtimeArgs": ["--prefix", "preview", "run", "dev"], "port": 5173 }
+  ]
+}

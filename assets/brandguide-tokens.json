@@ -1,0 +1,1381 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "meta": {
+    "name": "terebi+ Design Tokens",
+    "version": "1.1.0",
+    "date": "2026-11-18",
+    "basis": "960x540 dp (1920x1080 px @2x). 1 dp = 2 px bei 1080p, 4 px bei 2160p.",
+    "owner": "ARJO LAB"
+  },
+  "color": {
+    "ink": {
+      "950": {
+        "$type": "color",
+        "$value": "#07080B",
+        "$description": "Basis-Hintergrund, Scrim-Farbe, Text auf Fokus-Fläche"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#0E1014",
+        "$description": "Glas-Tönung (Alpha 0.74 bis 0.84)"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#16181E",
+        "$description": "Deckende Fläche: Einstellungen, Dialoge, Glas-Fallback"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#262A33",
+        "$description": "Deaktivierte Fläche, Skeleton"
+      }
+    },
+    "paper": {
+      "50": {
+        "$type": "color",
+        "$value": "#F2F0EB",
+        "$description": "Primärtext, Fokus-Fläche, Fokus-Ring. Warmweiss statt #FFFFFF"
+      }
+    },
+    "signal": {
+      "500": {
+        "$type": "color",
+        "$value": "#EF3E36",
+        "$description": "Einziger Akzent: Logo-Punkt, Live-/Aktiv-Indikator, Fortschritt, Schalter AN. Nie als Textfarbe für Fliesstext, nie als Fläche > 24 dp."
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#D2342D",
+        "$description": "Signal gedrückt"
+      }
+    },
+    "data": {
+      "cool": {
+        "$type": "color",
+        "$value": "#8DB3E2",
+        "$description": "Temperaturbalken kalt"
+      },
+      "warm": {
+        "$type": "color",
+        "$value": "#F0C27B",
+        "$description": "Temperaturbalken warm"
+      }
+    },
+    "state": {
+      "success": {
+        "$type": "color",
+        "$value": "#5BC48A",
+        "$description": "Verbunden, OK"
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "#F0B44C",
+        "$description": "Hinweis"
+      },
+      "error": {
+        "$type": "color",
+        "$value": "#FF6B61",
+        "$description": "Fehlertext und -icon auf Dunkel (7.18:1 auf ink.950)"
+      }
+    },
+    "role": {
+      "background": {
+        "$type": "color",
+        "$value": "{color.ink.950}"
+      },
+      "textPrimary": {
+        "$type": "color",
+        "$value": "{color.paper.50}",
+        "$description": "17.58:1 auf ink.950"
+      },
+      "textSecondary": {
+        "$type": "color",
+        "$value": "#F2F0EBB8",
+        "$description": "paper 72 %; 9.13:1 auf ink.950; Minimum auf Foto/Glas"
+      },
+      "textTertiary": {
+        "$type": "color",
+        "$value": "#F2F0EB85",
+        "$description": "paper 52 %; 5.13:1 auf ink.950; NUR auf deckenden Flächen"
+      },
+      "textDisabled": {
+        "$type": "color",
+        "$value": "#F2F0EB61",
+        "$description": "paper 38 %; nur deaktiviert"
+      },
+      "onFocused": {
+        "$type": "color",
+        "$value": "{color.ink.950}",
+        "$description": "17.58:1 auf paper.50"
+      },
+      "surfaceFocused": {
+        "$type": "color",
+        "$value": "{color.paper.50}"
+      },
+      "surfaceGlass": {
+        "$type": "color",
+        "$value": "#0E1014BD",
+        "$description": "ink.900 74 % über weichgezeichnetem Hintergrund (Blur 24 dp). Adaptiv bis 84 %"
+      },
+      "surfaceGlassFocused": {
+        "$type": "color",
+        "$value": "#0E1014D6",
+        "$description": "ink.900 84 %"
+      },
+      "hairline": {
+        "$type": "color",
+        "$value": "#F2F0EB29",
+        "$description": "1 dp Kante oben 16 % bis unten 4 %"
+      },
+      "divider": {
+        "$type": "color",
+        "$value": "#F2F0EB1A",
+        "$description": "10 %"
+      },
+      "track": {
+        "$type": "color",
+        "$value": "#F2F0EB1F",
+        "$description": "12 %"
+      },
+      "focusRing": {
+        "$type": "color",
+        "$value": "{color.paper.50}"
+      }
+    }
+  },
+  "scrim": {
+    "global": {
+      "$type": "number",
+      "$value": 0.16,
+      "$description": "ink.950 vollflächig"
+    },
+    "left": {
+      "$type": "gradient",
+      "$value": [
+        {
+          "color": "#07080B",
+          "alpha": 0.82,
+          "position": 0.0
+        },
+        {
+          "color": "#07080B",
+          "alpha": 0.72,
+          "position": 0.18
+        },
+        {
+          "color": "#07080B",
+          "alpha": 0.5,
+          "position": 0.34
+        },
+        {
+          "color": "#07080B",
+          "alpha": 0.1,
+          "position": 0.52
+        },
+        {
+          "color": "#07080B",
+          "alpha": 0.0,
+          "position": 0.62
+        }
+      ],
+      "$description": "horizontal, volle Breite"
+    },
+    "top": {
+      "$type": "gradient",
+      "$value": [
+        {
+          "color": "#07080B",
+          "alpha": 0.84,
+          "position": 0.0
+        },
+        {
+          "color": "#07080B",
+          "alpha": 0.56,
+          "position": 0.5
+        },
+        {
+          "color": "#07080B",
+          "alpha": 0.0,
+          "position": 1.0
+        }
+      ],
+      "$description": "vertikal, Höhe 160 dp ab oben"
+    },
+    "bottom": {
+      "$type": "gradient",
+      "$value": [
+        {
+          "color": "#07080B",
+          "alpha": 0.88,
+          "position": 0.0
+        },
+        {
+          "color": "#07080B",
+          "alpha": 0.62,
+          "position": 0.5
+        },
+        {
+          "color": "#07080B",
+          "alpha": 0.0,
+          "position": 1.0
+        }
+      ],
+      "$description": "vertikal, Höhe 200 dp ab unten (position 0 = unterer Rand)"
+    },
+    "right": {
+      "$type": "gradient",
+      "$value": [
+        {
+          "color": "#07080B",
+          "alpha": 0.45,
+          "position": 0.0
+        },
+        {
+          "color": "#07080B",
+          "alpha": 0.0,
+          "position": 1.0
+        }
+      ],
+      "$description": "horizontal von rechts, Breite 400 dp"
+    },
+    "minEffectiveBehindText": {
+      "$type": "number",
+      "$value": 0.69,
+      "$description": "Effektive Abdunklung (alle Scrims kombiniert) hinter Primär-/Sekundärtext, gerechnet gegen reines Weiss"
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "sans": {
+        "$type": "fontFamily",
+        "$value": [
+          "Geist",
+          "sans-serif"
+        ]
+      },
+      "mono": {
+        "$type": "fontFamily",
+        "$value": [
+          "Geist Mono",
+          "monospace"
+        ]
+      }
+    },
+    "minSize": {
+      "$type": "dimension",
+      "$value": "12sp"
+    },
+    "scale": {
+      "displayTemp": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "54sp",
+          "lineHeight": "56sp",
+          "fontWeight": 300,
+          "letterSpacing": "-0.03em"
+        }
+      },
+      "clock": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "30sp",
+          "lineHeight": "36sp",
+          "fontWeight": 500,
+          "letterSpacing": "-0.01em",
+          "fontFeature": "tnum"
+        }
+      },
+      "headline": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "24sp",
+          "lineHeight": "32sp",
+          "fontWeight": 600,
+          "letterSpacing": "-0.01em"
+        }
+      },
+      "titleLarge": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "20sp",
+          "lineHeight": "28sp",
+          "fontWeight": 600,
+          "letterSpacing": "-0.01em"
+        }
+      },
+      "titleMedium": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "17sp",
+          "lineHeight": "24sp",
+          "fontWeight": 500,
+          "letterSpacing": "-0.005em",
+          "focusedFontWeight": 600
+        }
+      },
+      "bodyLarge": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "16sp",
+          "lineHeight": "24sp",
+          "fontWeight": 400,
+          "letterSpacing": "0em"
+        }
+      },
+      "bodyMedium": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "15sp",
+          "lineHeight": "22sp",
+          "fontWeight": 500,
+          "letterSpacing": "0em"
+        }
+      },
+      "labelLarge": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "14sp",
+          "lineHeight": "20sp",
+          "fontWeight": 500,
+          "letterSpacing": "0em",
+          "fontFeature": "tnum"
+        }
+      },
+      "labelMedium": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "12sp",
+          "lineHeight": "16sp",
+          "fontWeight": 500,
+          "letterSpacing": "0.01em"
+        }
+      },
+      "overline": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "12sp",
+          "lineHeight": "16sp",
+          "fontWeight": 600,
+          "letterSpacing": "0.08em",
+          "textTransform": "uppercase"
+        }
+      },
+      "logo": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "26sp",
+          "lineHeight": "30sp",
+          "fontWeight": 600,
+          "letterSpacing": "-0.03em",
+          "note": "nur als Vektor-Asset, nie live gesetzt"
+        }
+      }
+    }
+  },
+  "space": {
+    "0": {
+      "$type": "dimension",
+      "$value": "0dp"
+    },
+    "1": {
+      "$type": "dimension",
+      "$value": "4dp"
+    },
+    "2": {
+      "$type": "dimension",
+      "$value": "8dp"
+    },
+    "3": {
+      "$type": "dimension",
+      "$value": "12dp"
+    },
+    "4": {
+      "$type": "dimension",
+      "$value": "16dp"
+    },
+    "5": {
+      "$type": "dimension",
+      "$value": "20dp"
+    },
+    "6": {
+      "$type": "dimension",
+      "$value": "24dp"
+    },
+    "8": {
+      "$type": "dimension",
+      "$value": "32dp"
+    },
+    "10": {
+      "$type": "dimension",
+      "$value": "40dp"
+    },
+    "11": {
+      "$type": "dimension",
+      "$value": "44dp"
+    },
+    "12": {
+      "$type": "dimension",
+      "$value": "48dp"
+    },
+    "14": {
+      "$type": "dimension",
+      "$value": "56dp"
+    }
+  },
+  "layout": {
+    "canvas": {
+      "width": {
+        "$type": "dimension",
+        "$value": "960dp"
+      },
+      "height": {
+        "$type": "dimension",
+        "$value": "540dp"
+      }
+    },
+    "overscanMin": {
+      "horizontal": {
+        "$type": "dimension",
+        "$value": "48dp",
+        "$description": "offiziell 5 %"
+      },
+      "vertical": {
+        "$type": "dimension",
+        "$value": "27dp",
+        "$description": "offiziell 5 %"
+      }
+    },
+    "keyline": {
+      "horizontal": {
+        "$type": "dimension",
+        "$value": "58dp",
+        "$description": "offizielles 12-Spalten-Raster"
+      },
+      "vertical": {
+        "$type": "dimension",
+        "$value": "28dp"
+      }
+    },
+    "grid": {
+      "columns": {
+        "$type": "number",
+        "$value": 12
+      },
+      "columnWidth": {
+        "$type": "dimension",
+        "$value": "52dp"
+      },
+      "gutter": {
+        "$type": "dimension",
+        "$value": "20dp"
+      }
+    },
+    "zones": {
+      "logo": {
+        "x": {
+          "$type": "dimension",
+          "$value": "58dp"
+        },
+        "baseline": {
+          "$type": "dimension",
+          "$value": "58dp"
+        },
+        "height": {
+          "$type": "dimension",
+          "$value": "26dp"
+        },
+        "note": "fix oben links, nie verschieben, nie fokussierbar"
+      },
+      "headerRight": {
+        "right": {
+          "$type": "dimension",
+          "$value": "902dp"
+        },
+        "top": {
+          "$type": "dimension",
+          "$value": "28dp"
+        },
+        "height": {
+          "$type": "dimension",
+          "$value": "40dp"
+        }
+      },
+      "settingsButton": {
+        "x": {
+          "$type": "dimension",
+          "$value": "862dp"
+        },
+        "y": {
+          "$type": "dimension",
+          "$value": "28dp"
+        },
+        "size": {
+          "$type": "dimension",
+          "$value": "40dp"
+        }
+      },
+      "appRail": {
+        "x": {
+          "$type": "dimension",
+          "$value": "58dp"
+        },
+        "y": {
+          "$type": "dimension",
+          "$value": "112dp"
+        },
+        "width": {
+          "$type": "dimension",
+          "$value": "268dp"
+        },
+        "rowHeight": {
+          "$type": "dimension",
+          "$value": "46dp"
+        },
+        "rowGap": {
+          "$type": "dimension",
+          "$value": "4dp"
+        },
+        "visibleRows": {
+          "$type": "number",
+          "$value": 6
+        }
+      },
+      "wifiCard": {
+        "x": {
+          "$type": "dimension",
+          "$value": "58dp"
+        },
+        "y": {
+          "$type": "dimension",
+          "$value": "436dp"
+        },
+        "width": {
+          "$type": "dimension",
+          "$value": "268dp"
+        },
+        "height": {
+          "$type": "dimension",
+          "$value": "76dp"
+        }
+      },
+      "weatherCard": {
+        "x": {
+          "$type": "dimension",
+          "$value": "634dp"
+        },
+        "y": {
+          "$type": "dimension",
+          "$value": "112dp"
+        },
+        "width": {
+          "$type": "dimension",
+          "$value": "268dp"
+        },
+        "height": {
+          "$type": "dimension",
+          "$value": "400dp"
+        }
+      },
+      "focusContext": {
+        "centerX": {
+          "$type": "dimension",
+          "$value": "480dp"
+        },
+        "titleBaseline": {
+          "$type": "dimension",
+          "$value": "486dp"
+        },
+        "hintBaseline": {
+          "$type": "dimension",
+          "$value": "506dp"
+        },
+        "maxWidth": {
+          "$type": "dimension",
+          "$value": "268dp"
+        }
+      }
+    }
+  },
+  "radius": {
+    "icon": {
+      "$type": "dimension",
+      "$value": "8dp"
+    },
+    "qr": {
+      "$type": "dimension",
+      "$value": "8dp"
+    },
+    "row": {
+      "$type": "dimension",
+      "$value": "14dp"
+    },
+    "cardSmall": {
+      "$type": "dimension",
+      "$value": "18dp"
+    },
+    "card": {
+      "$type": "dimension",
+      "$value": "24dp"
+    },
+    "pill": {
+      "$type": "dimension",
+      "$value": "999dp"
+    }
+  },
+  "elevation": {
+    "focusShadow": {
+      "$type": "shadow",
+      "$value": {
+        "color": "#000000",
+        "alpha": 0.55,
+        "offsetX": "0dp",
+        "offsetY": "8dp",
+        "blur": "24dp",
+        "spread": "0dp"
+      }
+    },
+    "cardShadow": {
+      "$type": "shadow",
+      "$value": "none",
+      "$description": "Glas schwebt durch Blur und Haarlinie, nicht durch Schatten"
+    }
+  },
+  "focus": {
+    "rowScale": {
+      "$type": "number",
+      "$value": 1.04
+    },
+    "cardScale": {
+      "$type": "number",
+      "$value": 1.02
+    },
+    "iconButtonScale": {
+      "$type": "number",
+      "$value": 1.1
+    },
+    "pressedScale": {
+      "$type": "number",
+      "$value": 0.98
+    },
+    "ringWidth": {
+      "$type": "dimension",
+      "$value": "2dp"
+    },
+    "ringOffset": {
+      "$type": "dimension",
+      "$value": "3dp"
+    }
+  },
+  "motion": {
+    "duration": {
+      "instant": {
+        "$type": "duration",
+        "$value": "0ms"
+      },
+      "press": {
+        "$type": "duration",
+        "$value": "100ms"
+      },
+      "focus": {
+        "$type": "duration",
+        "$value": "150ms"
+      },
+      "fade": {
+        "$type": "duration",
+        "$value": "200ms"
+      },
+      "enter": {
+        "$type": "duration",
+        "$value": "300ms"
+      },
+      "overlay": {
+        "$type": "duration",
+        "$value": "350ms"
+      },
+      "background": {
+        "$type": "duration",
+        "$value": "1200ms"
+      }
+    },
+    "easing": {
+      "standard": {
+        "$type": "cubicBezier",
+        "$value": [
+          0.2,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "$description": "Material 3 standard"
+      },
+      "emphasizedDecelerate": {
+        "$type": "cubicBezier",
+        "$value": [
+          0.05,
+          0.7,
+          0.1,
+          1.0
+        ],
+        "$description": "Material 3 emphasized decelerate: Eintritt"
+      },
+      "emphasizedAccelerate": {
+        "$type": "cubicBezier",
+        "$value": [
+          0.3,
+          0.0,
+          0.8,
+          0.15
+        ],
+        "$description": "Material 3 emphasized accelerate: Austritt"
+      },
+      "linear": {
+        "$type": "cubicBezier",
+        "$value": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "$description": "nur Ken-Burns"
+      }
+    },
+    "kenBurns": {
+      "scaleFrom": {
+        "$type": "number",
+        "$value": 1.0
+      },
+      "scaleTo": {
+        "$type": "number",
+        "$value": 1.06
+      },
+      "duration": {
+        "$type": "duration",
+        "$value": "40000ms"
+      }
+    },
+    "backgroundRotation": {
+      "$type": "duration",
+      "$value": "1800000ms",
+      "$description": "alle 30 min, Crossfade 1200 ms"
+    }
+  },
+  "icon": {
+    "library": {
+      "$type": "string",
+      "$value": "Lucide (ISC)"
+    },
+    "size": {
+      "small": {
+        "$type": "dimension",
+        "$value": "20dp"
+      },
+      "medium": {
+        "$type": "dimension",
+        "$value": "24dp"
+      },
+      "large": {
+        "$type": "dimension",
+        "$value": "44dp"
+      }
+    },
+    "strokeAt24": {
+      "$type": "dimension",
+      "$value": "2dp"
+    }
+  },
+  "weather": {
+    "$description": "Aktives Wetter / Dynamischer Hintergrund. Datenquelle Open-Meteo (WMO-Codes). Werte ohne offizielle Quelle sind terebi+-Vorgaben.",
+    "api": {
+      "$type": "string",
+      "$value": "https://api.open-meteo.com/v1/forecast?latitude=47.3769&longitude=8.5417&current=temperature_2m,weather_code,is_day,rain,snowfall,wind_speed_10m,wind_direction_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=Europe%2FZurich&forecast_days=7"
+    },
+    "wmo": {
+      "CLEAR": [
+        0,
+        1
+      ],
+      "PARTLY_CLOUDY": [
+        2
+      ],
+      "OVERCAST": [
+        3
+      ],
+      "FOG": [
+        45,
+        48
+      ],
+      "DRIZZLE": [
+        51,
+        53,
+        55
+      ],
+      "RAIN": [
+        61,
+        63,
+        80,
+        81
+      ],
+      "HEAVY_RAIN": [
+        65,
+        82
+      ],
+      "THUNDERSTORM": [
+        95,
+        96,
+        97,
+        99
+      ],
+      "SNOW": [
+        71,
+        73,
+        75,
+        77,
+        85,
+        86
+      ],
+      "SLEET": [
+        56,
+        57,
+        66,
+        67
+      ],
+      "$description": "Unbekannter Code: OVERCAST. SLEET zusätzlich, wenn RAIN/DRIZZLE und temperature_2m <= 1 °C und snowfall > 0."
+    },
+    "skyGroup": {
+      "CLEAR": "CLEAR",
+      "PARTLY_CLOUDY": "CLOUDY",
+      "OVERCAST": "CLOUDY",
+      "FOG": "FOG",
+      "DRIZZLE": "WET",
+      "RAIN": "WET",
+      "HEAVY_RAIN": "WET",
+      "THUNDERSTORM": "WET",
+      "SNOW": "WINTER",
+      "SLEET": "WINTER"
+    },
+    "phase": {
+      "twilightHalfWindow": {
+        "$type": "duration",
+        "$value": "45min",
+        "$description": "DAWN = Sonnenaufgang ± 45 min, DUSK = Sonnenuntergang ± 45 min, dazwischen DAY, sonst NIGHT"
+      }
+    },
+    "grade": {
+      "DAWN": {
+        "exposure": {
+          "$type": "number",
+          "$value": 0.94
+        },
+        "saturation": {
+          "$type": "number",
+          "$value": 0.92
+        },
+        "tint": {
+          "$type": "color",
+          "$value": "#F0C27B"
+        },
+        "tintAlpha": {
+          "$type": "number",
+          "$value": 0.05
+        }
+      },
+      "DAY": {
+        "exposure": {
+          "$type": "number",
+          "$value": 0.86
+        },
+        "saturation": {
+          "$type": "number",
+          "$value": 0.88
+        },
+        "tint": {
+          "$type": "color",
+          "$value": "#8DB3E2"
+        },
+        "tintAlpha": {
+          "$type": "number",
+          "$value": 0.04
+        }
+      },
+      "DUSK": {
+        "exposure": {
+          "$type": "number",
+          "$value": 0.9
+        },
+        "saturation": {
+          "$type": "number",
+          "$value": 0.9
+        },
+        "tint": {
+          "$type": "color",
+          "$value": "#6E5A8A"
+        },
+        "tintAlpha": {
+          "$type": "number",
+          "$value": 0.05
+        }
+      },
+      "NIGHT": {
+        "exposure": {
+          "$type": "number",
+          "$value": 1.0
+        },
+        "saturation": {
+          "$type": "number",
+          "$value": 0.9
+        },
+        "tint": {
+          "$type": "color",
+          "$value": "#1B2A4A"
+        },
+        "tintAlpha": {
+          "$type": "number",
+          "$value": 0.06
+        }
+      }
+    },
+    "globalScrim": {
+      "$description": "Ersetzt scrim.global je Szene. Nie unter 0.16. Adaptive Regel (Kapitel 7.6) gilt zusätzlich.",
+      "CLEAR": {
+        "DAWN": {
+          "$type": "number",
+          "$value": 0.2
+        },
+        "DAY": {
+          "$type": "number",
+          "$value": 0.22
+        },
+        "DUSK": {
+          "$type": "number",
+          "$value": 0.18
+        },
+        "NIGHT": {
+          "$type": "number",
+          "$value": 0.16
+        }
+      },
+      "CLOUDY": {
+        "DAWN": {
+          "$type": "number",
+          "$value": 0.18
+        },
+        "DAY": {
+          "$type": "number",
+          "$value": 0.2
+        },
+        "DUSK": {
+          "$type": "number",
+          "$value": 0.18
+        },
+        "NIGHT": {
+          "$type": "number",
+          "$value": 0.16
+        }
+      },
+      "FOG": {
+        "DAWN": {
+          "$type": "number",
+          "$value": 0.2
+        },
+        "DAY": {
+          "$type": "number",
+          "$value": 0.22
+        },
+        "DUSK": {
+          "$type": "number",
+          "$value": 0.18
+        },
+        "NIGHT": {
+          "$type": "number",
+          "$value": 0.16
+        }
+      },
+      "WET": {
+        "DAWN": {
+          "$type": "number",
+          "$value": 0.18
+        },
+        "DAY": {
+          "$type": "number",
+          "$value": 0.18
+        },
+        "DUSK": {
+          "$type": "number",
+          "$value": 0.18
+        },
+        "NIGHT": {
+          "$type": "number",
+          "$value": 0.16
+        }
+      },
+      "WINTER": {
+        "DAWN": {
+          "$type": "number",
+          "$value": 0.24
+        },
+        "DAY": {
+          "$type": "number",
+          "$value": 0.28
+        },
+        "DUSK": {
+          "$type": "number",
+          "$value": 0.2
+        },
+        "NIGHT": {
+          "$type": "number",
+          "$value": 0.16
+        }
+      }
+    },
+    "effects": {
+      "maxParticles": {
+        "$type": "number",
+        "$value": 300
+      },
+      "textZoneOpacityFactor": {
+        "$type": "number",
+        "$value": 0.5,
+        "$description": "Partikel links von x 346 dp (Rail, WLAN-Karte) mit halber Deckkraft"
+      },
+      "windAngleMaxDeg": {
+        "$type": "number",
+        "$value": 15
+      },
+      "windAngleDegPerKmh": {
+        "$type": "number",
+        "$value": 0.5
+      },
+      "rain": {
+        "DRIZZLE": {
+          "count": {
+            "$type": "number",
+            "$value": 60
+          },
+          "lengthDp": [
+            10,
+            16
+          ],
+          "speedDpPerS": [
+            700,
+            900
+          ],
+          "opacity": [
+            0.08,
+            0.14
+          ]
+        },
+        "RAIN": {
+          "count": {
+            "$type": "number",
+            "$value": 140
+          },
+          "lengthDp": [
+            14,
+            24
+          ],
+          "speedDpPerS": [
+            900,
+            1200
+          ],
+          "opacity": [
+            0.1,
+            0.18
+          ]
+        },
+        "HEAVY_RAIN": {
+          "count": {
+            "$type": "number",
+            "$value": 260
+          },
+          "lengthDp": [
+            20,
+            30
+          ],
+          "speedDpPerS": [
+            1200,
+            1500
+          ],
+          "opacity": [
+            0.12,
+            0.22
+          ]
+        },
+        "strokeDp": {
+          "$type": "number",
+          "$value": 1
+        },
+        "color": {
+          "$type": "color",
+          "$value": "#F2F0EB"
+        },
+        "layers": {
+          "$type": "number",
+          "$value": 2,
+          "$description": "fern: 60 % Länge, 70 % Tempo, 60 % Deckkraft"
+        }
+      },
+      "snow": {
+        "light": {
+          "count": {
+            "$type": "number",
+            "$value": 90
+          }
+        },
+        "moderate": {
+          "count": {
+            "$type": "number",
+            "$value": 160
+          }
+        },
+        "heavy": {
+          "count": {
+            "$type": "number",
+            "$value": 240
+          }
+        },
+        "radiusDp": [
+          1.0,
+          3.5
+        ],
+        "fallDpPerS": [
+          18,
+          55
+        ],
+        "swayAmplitudeDp": [
+          6,
+          14
+        ],
+        "swayPeriodMs": [
+          4000,
+          7000
+        ],
+        "opacity": [
+          0.35,
+          0.75
+        ],
+        "layers": {
+          "$type": "number",
+          "$value": 3
+        },
+        "wmoIntensity": {
+          "light": [
+            71,
+            77,
+            85
+          ],
+          "moderate": [
+            73
+          ],
+          "heavy": [
+            75,
+            86
+          ]
+        }
+      },
+      "sleet": {
+        "rainCount": {
+          "$type": "number",
+          "$value": 80
+        },
+        "rainOpacity": [
+          0.1,
+          0.16
+        ],
+        "snowCount": {
+          "$type": "number",
+          "$value": 60
+        },
+        "snowRadiusDp": [
+          1.0,
+          2.0
+        ],
+        "snowFallDpPerS": [
+          60,
+          90
+        ]
+      },
+      "fog": {
+        "opacity": [
+          0.06,
+          0.14
+        ],
+        "driftDpPerS": {
+          "$type": "number",
+          "$value": 4
+        },
+        "topFraction": {
+          "$type": "number",
+          "$value": 0.45,
+          "$description": "nur unterhalb 45 % der Bildhöhe"
+        },
+        "octaves": {
+          "$type": "number",
+          "$value": 3
+        }
+      },
+      "clouds": {
+        "PARTLY_CLOUDY": {
+          "opacity": {
+            "$type": "number",
+            "$value": 0.06
+          },
+          "driftDpPerS": {
+            "$type": "number",
+            "$value": 2
+          }
+        },
+        "OVERCAST": {
+          "opacity": {
+            "$type": "number",
+            "$value": 0.1
+          },
+          "driftDpPerS": {
+            "$type": "number",
+            "$value": 3
+          }
+        },
+        "HEAVY_RAIN": {
+          "opacity": {
+            "$type": "number",
+            "$value": 0.1
+          },
+          "driftDpPerS": {
+            "$type": "number",
+            "$value": 3
+          }
+        },
+        "bottomFraction": {
+          "$type": "number",
+          "$value": 0.4,
+          "$description": "nur oberhalb 40 % der Bildhöhe"
+        }
+      },
+      "lightning": {
+        "peakOpacity": {
+          "$type": "number",
+          "$value": 0.1
+        },
+        "riseMs": {
+          "$type": "number",
+          "$value": 60
+        },
+        "decayMs": {
+          "$type": "number",
+          "$value": 180
+        },
+        "secondFlashDelayMs": {
+          "$type": "number",
+          "$value": 90
+        },
+        "secondFlashFactor": {
+          "$type": "number",
+          "$value": 0.6
+        },
+        "minIntervalMs": {
+          "$type": "number",
+          "$value": 45000
+        },
+        "maxIntervalMs": {
+          "$type": "number",
+          "$value": 90000
+        },
+        "startDelayMs": {
+          "$type": "number",
+          "$value": 10000
+        },
+        "color": {
+          "$type": "color",
+          "$value": "#F2F0EB"
+        }
+      },
+      "budget": {
+        "gpuMsPerFrame": {
+          "$type": "number",
+          "$value": 2.0
+        },
+        "cpuMsPerFrame": {
+          "$type": "number",
+          "$value": 1.0
+        },
+        "jankThreshold": {
+          "$type": "number",
+          "$value": 0.05,
+          "$description": "Anteil Janky Frames über 10 s; dann Partikel halbieren, danach Effekte aus"
+        }
+      },
+      "shaderMinSdk": {
+        "$type": "number",
+        "$value": 33,
+        "$description": "AGSL RuntimeShader ab Android 13; darunter Textur-Fallback"
+      }
+    },
+    "transition": {
+      "condition": {
+        "$type": "duration",
+        "$value": "2000ms"
+      },
+      "effectFade": {
+        "$type": "duration",
+        "$value": "1500ms"
+      },
+      "phase": {
+        "$type": "duration",
+        "$value": "4000ms"
+      },
+      "intensity": {
+        "$type": "duration",
+        "$value": "3000ms"
+      },
+      "wakeFadeIn": {
+        "$type": "duration",
+        "$value": "300ms"
+      },
+      "reducedMotion": {
+        "$type": "duration",
+        "$value": "200ms"
+      },
+      "inputQuietPeriod": {
+        "$type": "duration",
+        "$value": "3000ms"
+      }
+    },
+    "refresh": {
+      "current": {
+        "$type": "duration",
+        "$value": "15min"
+      },
+      "daily": {
+        "$type": "duration",
+        "$value": "3h"
+      },
+      "hysteresisPolls": {
+        "$type": "number",
+        "$value": 2
+      },
+      "timeout": {
+        "$type": "duration",
+        "$value": "10s"
+      }
+    },
+    "cache": {
+      "fullScene": {
+        "$type": "duration",
+        "$value": "3h"
+      },
+      "neutralScene": {
+        "$type": "duration",
+        "$value": "12h"
+      },
+      "$description": "bis 3 h volle Szene, 3 bis 12 h CLOUDY ohne Effekte, danach Fallback-Bild der Tageszeit"
+    },
+    "modes": {
+      "$type": "string",
+      "$value": [
+        "ON",
+        "IMAGE_ONLY",
+        "OFF"
+      ],
+      "$description": "Einstellung «Aktives Wetter»: Ein / Nur Bild / Aus"
+    }
+  }
+}

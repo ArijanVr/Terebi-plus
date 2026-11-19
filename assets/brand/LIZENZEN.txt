@@ -1,0 +1,6 @@
+terebi+ Brandguide · Lizenzen der Fremdbestandteile
+
+Geist / Geist Mono: SIL Open Font License 1.1 (https://vercel.com/font)
+Lucide Icons (icons/): ISC License, lucide-static 1.75.0 (https://lucide.dev/license)
+Hintergrundfoto im Mockup: KI-generierter Platzhalter, nicht für die App verwenden.
+App-Icons im Mockup: vereinfachte Platzhalter, im Launcher kommen die echten Icons vom System.
