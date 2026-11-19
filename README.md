@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/logo-banner.svg" alt="terebi+" width="640">
+</p>
+
 # terebi+
 
 Minimalistischer Launcher für Google TV und Android TV. Kotlin, Jetpack Compose, offline startfähig,
